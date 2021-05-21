@@ -1,0 +1,1 @@
+// JS folder for extension functionality
