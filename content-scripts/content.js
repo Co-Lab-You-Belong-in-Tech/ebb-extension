@@ -5,7 +5,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 opacity: 0%
             }
             img[src*=".GIF"] {
-                opacity: 75%
+                opacity: 0%
+            }
+            img[alt*="gif"] {
+                opacity 0%
+            }
+            img[alt*="GIF"] {
+                opacity 0%
             }
         </style>`
     );
