@@ -7,6 +7,9 @@ if(stopGif) {
                 tabs[0].id,
                 {
                     imageDivId: `${guidGenerator()}`
+                },
+                function(response) {
+                    window.close();
                 }
             );
             function guidGenerator() {
