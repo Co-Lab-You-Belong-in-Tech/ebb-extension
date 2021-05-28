@@ -20,5 +20,16 @@
             "js": ["lib/jquery.min.js","content-scripts/content.js"],
             "run_at": "document_start"
         }
-    ]
+    ],
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "windows": "Ctrl+Shift+Y",
+            "mac": "MacCtrl+Shift+Y",
+            "chromeos": "Ctrl+Shift+U",
+            "linux": "Ctrl+Shift+J"
+          },
+          "description": "Opens popup.html"
+        }
+      }
 }
