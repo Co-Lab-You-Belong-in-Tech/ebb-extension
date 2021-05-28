@@ -1,3 +1,4 @@
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     $("head").prepend(
         `<style>
