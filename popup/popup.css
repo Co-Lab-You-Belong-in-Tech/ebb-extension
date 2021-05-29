@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CSS file for popup.html*/
 body{
     height:200px;
@@ -7,8 +8,41 @@ body{
 div.main{
     display:flex;
     justify-content:space-between;
-
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    background: linear-gradient(0deg, rgba(55, 87, 149, 0.2), rgba(55, 87, 149, 0.2)), linear-gradient(0deg, #121212, #121212);
+
+    height: 310px;
+    width: 400px;
+    left: 690px;
+    top: 61px;
+    border-radius: 0px;
+
+    box-shadow: 0px 0px 4px 0px #000000F2;
+}
+
+button {
+    background: #e7e7e7; 
+    height:30px;
+    width: 50px;
+    outline:none;
+    margin:10px;
+    border:none;
+    border-radius:2px;
+>>>>>>> 854da0756cf4bc7c031ee1e9a38f185c58126fd7
+
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    opacity: 25%;
+}
+<<<<<<< HEAD
 div.pauseGifs{
     display:flex;
     justify-content:space-between;
@@ -83,3 +117,5 @@ div.altText{
   .slider.round:before {
     border-radius: 50%;
   }
+=======
+>>>>>>> 854da0756cf4bc7c031ee1e9a38f185c58126fd7
