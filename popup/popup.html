@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,41 @@
     <title>ebb</title>
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
-    <button type="button" id="stopGif">ebb</button>
+
+    <div class="main">
+        <p>ebb</p>
+        <label class="switch" for="all">
+            <input type="checkbox" name="checkbox" id="all">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <p>GIFs</p>
+
+    <div class="pauseGifs">
+        <p>Pause Gifs</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="vanishGifs">
+        <p>Hide All Gifs</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="altText">
+        <p>Display Alternative Text</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
     <script type="text/javascript" src="popup.js"></script>
 </body>
+
 </html>
