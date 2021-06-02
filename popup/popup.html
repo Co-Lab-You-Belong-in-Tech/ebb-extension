@@ -10,38 +10,56 @@
 </head>
 
 <body>
-
-    <div class="main">
-        <p>ebb</p>
+    <header>
+        <img src="../images/ebbLogoLarge.png" alt="ebb logo">
+        <!-- This label was commented out for the demo. It was uncommented afterwards.  -->
         <label class="switch" for="all">
             <input type="checkbox" name="checkbox" id="all">
             <span class="slider round"></span>
         </label>
-    </div>
+    </header>
 
-    <p>GIFs</p>
+    <main>
 
-    <div class="pauseGifs">
-        <p>Pause Gifs</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <div class="vanishGifs">
-        <p>Hide All Gifs</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <div class="altText">
-        <p>Display Alternative Text</p>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-    </div>
+        <section  class="gif-title">
+            <p>GIFs</p>
+        </section>
+    
+        <section class="vanishGifs">
+            <p>Hide All GIFs</p>
+
+            <!-- This label was commented out for the demo. It was uncommented afterwards.  -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+            <!-- This label was added for the demo. It was commented out afterwards.  -->
+            <!-- <label class="switch" for="all">
+                <input type="checkbox" name="checkbox" id="all">
+                <span class="slider round"></span>
+            </label> -->
+
+        </section>
+
+        <section class="pauseGifs">
+            <p>Pause GIFs</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </section>
+
+        <section class="altText">
+            <p>Display Alternative Text</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </section>
+
+    </main>
+
     <script type="text/javascript" src="popup.js"></script>
 </body>
 

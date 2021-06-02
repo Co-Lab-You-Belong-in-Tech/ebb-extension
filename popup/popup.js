@@ -5,16 +5,15 @@ var checkbox = document.querySelector("input[name=checkbox]");
 // At this moment it only turns the vanishing effect on not off.
 checkbox.addEventListener('change', function() {
     if (this.checked) {
-        chrome.tabs.query({
-                status: "complete"
-            },
+        chrome.storage.sync.set({checked:true});
+        chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
                     chrome.tabs.sendMessage(
                         tab.id,
                         {
                             tabId: tab.id
-                        }/*,
+                        },/*
                         function(response) {
                             window.close();
                             *
@@ -25,5 +24,7 @@ checkbox.addEventListener('change', function() {
                 })
             }
         );
+       
     }
 });
+
