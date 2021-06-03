@@ -27,6 +27,7 @@ checkbox.addEventListener('change', function() {
         );   
     }
 
+    // Removes the vanish effect when the toggle is clicked to the "off" position.
     if (!this.checked) {
         chrome.storage.sync.set({checked:false});
     }
