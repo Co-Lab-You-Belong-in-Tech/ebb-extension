@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,59 @@
     <title>ebb</title>
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
-    <button type="button" id="stopGif">ebb</button>
+    <header>
+        <img src="../images/ebbLogoLarge.png" alt="ebb logo">
+        <!-- This label was commented out for the demo. It was uncommented afterwards.  -->
+        <label class="switch" for="all">
+            <input type="checkbox" name="checkbox" id="all">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <main>
+
+        <section  class="gif-title">
+            <p>GIFs</p>
+        </section>
+    
+        <section class="vanishGifs">
+            <p>Hide All GIFs</p>
+
+            <!-- This label was commented out for the demo. It was uncommented afterwards.  -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+            <!-- This label was added for the demo. It was commented out afterwards.  -->
+            <!-- <label class="switch" for="all">
+                <input type="checkbox" name="checkbox" id="all">
+                <span class="slider round"></span>
+            </label> -->
+
+        </section>
+
+        <section class="pauseGifs">
+            <p>Pause GIFs</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </section>
+
+        <section class="altText">
+            <p>Display Alternative Text</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </section>
+
+    </main>
+
     <script type="text/javascript" src="popup.js"></script>
 </body>
+
 </html>
