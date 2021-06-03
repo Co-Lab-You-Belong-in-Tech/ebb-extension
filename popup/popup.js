@@ -13,7 +13,8 @@ checkbox.addEventListener('change', function() {
                         tab.id,
                         {
                             tabId: tab.id
-                        },/*
+                        },
+                        /*
                         function(response) {
                             window.close();
                             *
@@ -23,8 +24,11 @@ checkbox.addEventListener('change', function() {
                     );
                 })
             }
-        );
-       
+        );   
+    }
+
+    if (!this.checked) {
+        chrome.storage.sync.set({checked:false});
     }
 });
 
