@@ -5,6 +5,7 @@ var checkbox = document.querySelector("input[name=checkbox]");
 // At this moment it only turns the vanishing effect on not off.
 checkbox.addEventListener('change', function() {
     if (this.checked) {
+        chrome.storage.sync.set({checked:true});
         chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
@@ -12,7 +13,8 @@ checkbox.addEventListener('change', function() {
                         tab.id,
                         {
                             tabId: tab.id
-                        }/*,
+                        },
+                        /*
                         function(response) {
                             window.close();
                             *
@@ -22,6 +24,12 @@ checkbox.addEventListener('change', function() {
                     );
                 })
             }
-        );
+        );   
+    }
+
+    // Removes the vanish effect when the toggle is clicked to the "off" position.
+    if (!this.checked) {
+        chrome.storage.sync.set({checked:false});
     }
 });
+
