@@ -8,15 +8,12 @@
         "48": "icons/ebb48x48.png",
         "128": "icons/ebb128x128.png"
     },
-    
     "action": {
         "default_popup": "popup/popup.html"
     },
-
     "background":{
         "service_worker": "background.js"
     },
-
     "content_scripts": [
         {
             "matches": [
@@ -26,9 +23,7 @@
             "run_at": "document_start"
         }
     ],
-
-    "permissions":["tabs","storage"],    
-
+    "permissions":["tabs","storage"],
     "commands": {
         "_execute_browser_action": {
           "suggested_key": {
