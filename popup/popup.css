@@ -80,8 +80,8 @@ p {
     top: 191px;
     border-radius: nullpx;
 
-    font-family: Open Sans;
-    font-size: 14px;
+    font-family: 'Open Sans', Verdana, sans-serif;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
@@ -108,18 +108,31 @@ section.altText{
 }
 
 .switch{
-    position:relative;
-    display:inline-block;
-    width:60px;
-    height:34px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
 .switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
+}
+
+.short-switch{
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 34px;
+}
+
+.short-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -127,25 +140,26 @@ section.altText{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #cdcfd4;
   -webkit-transition: .4s;
   transition: .4s;
 }
-  
+
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   left: 4px;
-  bottom: 4px;
-  background-color: white;
+  bottom: 3px;
+  background-color: #F1F1F1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: .4s;
   transition: .4s;
 }
-  
+
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7083C0;
 }
 
 input:focus + .slider {
@@ -153,9 +167,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
 }
 
 .slider.round {
@@ -166,14 +180,32 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+input + .slider {
+  border: transparent solid 2px;
+}
+
 input:focus + .slider {
-    // background-color: green;
+    border: 2px yellow solid;
 }
 
 input:focus + .slider.round:before {
-  background-color: purple;
+  // background-color: purple;
 }
 
 input:focus {
-  background-color: purple;
+  // background-color: purple;
+}
+
+
+.short-switch{
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 34px;
+}
+
+.short-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
