@@ -118,7 +118,20 @@ section.altText{
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
+
+.short-switch{
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 34px;
+}
+
+.short-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
 .slider {
   position: absolute;
@@ -139,7 +152,8 @@ section.altText{
   width: 24px;
   left: 4px;
   bottom: 3px;
-  background-color: white;
+  background-color: #F1F1F1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -180,4 +194,18 @@ input:focus + .slider.round:before {
 
 input:focus {
   // background-color: purple;
+}
+
+
+.short-switch{
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 34px;
+}
+
+.short-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
