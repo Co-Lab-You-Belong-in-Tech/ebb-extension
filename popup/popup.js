@@ -1,8 +1,6 @@
 var checkbox = document.querySelector("input[name=checkbox]");
-// we also need to save the changes of each selection so when
-// the popup is selected the previous state remains
-// this is different from the content scipts persisting
-// At this moment it only turns the vanishing effect on not off.
+
+
 checkbox.addEventListener('change', function() {
     if (this.checked) {
         chrome.storage.sync.set({checked:true});
@@ -33,3 +31,12 @@ checkbox.addEventListener('change', function() {
     }
 });
 
+function showChecked(){
+    chrome.storage.sync.get("checked", function(data){
+        if(data["checked"]){
+        checkbox.setAttribute("checked", "");// sets the checkbox attribute to its default value(true)
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', showChecked);
