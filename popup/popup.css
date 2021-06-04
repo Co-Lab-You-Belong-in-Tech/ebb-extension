@@ -114,6 +114,7 @@ section.altText{
     height: 34px;
 }
 
+
 .switch input { 
     opacity: 0;
     width: 0;
@@ -127,11 +128,11 @@ section.altText{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #cdcfd4;
   -webkit-transition: .4s;
   transition: .4s;
 }
-  
+
 .slider:before {
   position: absolute;
   content: "";
