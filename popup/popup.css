@@ -114,7 +114,6 @@ section.altText{
     height: 34px;
 }
 
-
 .switch input { 
     opacity: 0;
     width: 0;
@@ -146,7 +145,7 @@ section.altText{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7083C0;
 }
 
 input:focus + .slider {
