@@ -112,7 +112,7 @@ section.altText{
     justify-content:space-between;
 }
 
-.switch{
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -123,19 +123,6 @@ section.altText{
     opacity: 0;
     width: 0;
     height: 0;
-}
-
-.short-switch{
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 34px;
-}
-
-.short-switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .slider {
@@ -202,15 +189,77 @@ input:focus {
 }
 
 
-.short-switch{
+.subtitle-switch {
   position: relative;
   display: inline-block;
   width: 44px;
-  height: 34px;
+  height: 24px;
 }
 
-.short-switch input { 
+.subtitle-switch input { 
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+
+.subtitle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdcfd4;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.subtitle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #F1F1F1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .subtitle-slider {
+  background-color: #7083C0;
+}
+
+input:focus + .subtitle-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .subtitle-slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+
+.subtitle-slider.round {
+  border-radius: 34px;
+}
+
+.subtitle-slider.round:before {
+  border-radius: 50%;
+}
+
+input + .subtitle-slider {
+  border: transparent solid 1px;
+}
+
+input:focus + .subtitle-slider {
+    border: 1px solid #C5D0F1;
+}
+
+.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
+  border: 1px solid yellow;
 }
