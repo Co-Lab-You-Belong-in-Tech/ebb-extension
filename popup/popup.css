@@ -259,3 +259,7 @@ input + .subtitle-slider {
 input:focus + .subtitle-slider {
     border: 1px solid #C5D0F1;
 }
+
+.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
+  border: 1px solid yellow;
+}
