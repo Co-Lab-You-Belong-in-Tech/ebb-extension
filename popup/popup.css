@@ -91,6 +91,11 @@ p {
     color: #F3F3F3;
 }
 
+.toggle-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
 
 section.pauseGifs{
     display:flex;
@@ -185,7 +190,7 @@ input + .slider {
 }
 
 input:focus + .slider {
-    border: 2px yellow solid;
+    border: 2px solid #C5D0F1;
 }
 
 input:focus + .slider.round:before {
