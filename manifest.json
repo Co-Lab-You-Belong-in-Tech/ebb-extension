@@ -25,7 +25,7 @@
     ],
     "permissions":["tabs","storage"],
     "commands": {
-        "_execute_browser_action": {
+        "_execute_action": {
           "suggested_key": {
             "windows": "Ctrl+Shift+Y",
             "mac": "MacCtrl+Shift+Y",
