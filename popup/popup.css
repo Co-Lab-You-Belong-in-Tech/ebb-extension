@@ -211,6 +211,9 @@ input:focus + .subtitle-slider {
 }
 
 input:checked + .subtitle-slider:before {
+  background-image: url('../images/checkmark.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
