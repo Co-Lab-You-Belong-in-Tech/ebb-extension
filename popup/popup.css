@@ -233,5 +233,5 @@ input:focus + .subtitle-slider {
 }
 
 .vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
-  border: 1px solid yellow;
+  border: 1px solid #C5D0F1;
 }
