@@ -143,6 +143,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
+  background-image: url('../images/checkmark.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
