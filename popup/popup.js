@@ -3,6 +3,8 @@ var vanish = document.querySelector("input[name=vanish]");
 var pause = document.querySelector("input[name=pause]");
 var displayAlt = document.querySelector("input[name=displayAlt]");
 
+const reloadMessageField = document.querySelector("#reload-message");
+const messageBox = document.createElement('span');
 
 
 toggleAll.addEventListener("change", function() {
@@ -34,14 +36,19 @@ toggleAll.addEventListener("change", function() {
 
 // event listener for Hide all Gifs toogle
 vanish.addEventListener("change", function() {
+    console.log('I changed the toggle!');
     if (vanish.checked) {
         chrome.storage.sync.set({
             vanish: true
         });
+        console.log('I checked this one toggle!');
+        removeMessage();
     } else {
         chrome.storage.sync.set({
             vanish: false
         });
+        console.log('I unchecked the toggle!');
+        displayMessage();
     }
 });
 
@@ -99,3 +106,22 @@ function showChecked() {
 }
 
 window.addEventListener("DOMContentLoaded", showChecked);
+
+
+function displayMessage() {
+    console.log('displaying message');
+
+    reloadMessageField.textContent = "Reload page to view GIFs again."
+    
+    // messageBox.textContent = "Reload page to view GIFs again."
+
+    // reloadMessageField.appendChild(messageBox);
+};
+
+function removeMessage() {
+    console.log('removing message');
+    // reloadMessageField.removeChild(messageBox);
+
+    reloadMessageField.textContent = ""
+
+};
