@@ -204,7 +204,7 @@ input:focus + .slider {
   height: 18px;
   width: 18px;
   left: 4px;
-  bottom: 2px;
+  bottom: 3px;
   background-color: #F1F1F1;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: .4s;
@@ -240,14 +240,6 @@ input:checked + .subtitle-slider:before {
 
 .subtitle-slider.round:before {
   border-radius: 50%;
-}
-
-input + .subtitle-slider {
-  border: transparent solid 1px;
-}
-
-input:focus + .subtitle-slider {
-    border: 1px solid #C5D0F1;
 }
 
 .vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
