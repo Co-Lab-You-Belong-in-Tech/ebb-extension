@@ -1,7 +1,9 @@
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     $("head").prepend(
         `<style>
+            * {
+            animation: none !important;
+            }
             img[src*=".gif"] {
                 opacity: 0%;
             }
@@ -18,4 +20,3 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     );
     sendResponse({ fromcontent: "This message is from content.js" });
 });
-
