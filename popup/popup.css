@@ -117,8 +117,8 @@ p {
   right: 0;
   bottom: 0;
   background-color: #cdcfd4;
-  -webkit-transition: .4s;
-  transition: .4s;
+  /* -webkit-transition: .4s;
+  transition: .4s; */
 }
 
 .slider:before {
@@ -130,8 +130,8 @@ p {
   bottom: 3px;
   background-color: #F1F1F1;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  -webkit-transition: .4s;
-  transition: .4s;
+  /* -webkit-transition: .4s;
+  transition: .4s; */
 }
 
 input:checked + .slider {
