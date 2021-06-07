@@ -71,7 +71,11 @@ main {
   justify-content: space-between;
 }
 
-p {
+.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
+  border: 1px solid #C5D0F1;
+}
+
+.text {
   height: 20px;
   width: fit-content;
   left: 726.76953125px;
@@ -94,6 +98,14 @@ p {
 .toggle-subtitle {
   font-size: 14px;
   font-weight: 600;
+}
+
+input + .slider {
+  border: transparent solid 2px;
+}
+
+input:focus + .slider {
+  border: 2px solid #C5D0F1;
 }
 
 .switch {
@@ -134,14 +146,6 @@ p {
   transition: .4s; */
 }
 
-input:checked + .slider {
-  background-color: #7083C0;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
 input + .slider:before {
   background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
   background-position: 50% 50%;
@@ -157,45 +161,55 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 
-.slider.round {
+input:focus + .slider, input:focus + .subtitle-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider, input:checked + .subtitle-slider {
+  background-color: #7083C0;
+}
+
+.slider.round, .subtitle-slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round:before, .subtitle-slider.round:before {
   border-radius: 50%;
-}
-
-input + .slider {
-  border: transparent solid 2px;
-}
-
-input:focus + .slider {
-  border: 2px solid #C5D0F1;
 }
 
 .subtitle-switch {
   position: relative;
   display: inline-block;
-  width: 44px;
-  height: 24px;
-}
-
-.subtitle-switch input { 
+  width: 40px;
+  height: 40px;
+  z-index: 1;
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .subtitle-slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 24px;
+  width: 44px;
+  
+  left: 325px;
+  right: 0px;
+  bottom: 0px;
   background-color: #cdcfd4;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.vanish-slider {
+  top: 124px;
+}
+
+.pause-slider {
+  top: 188px;
+}
+
+.alt-slider {
+  top: 252px;
 }
 
 .subtitle-slider:before {
@@ -211,14 +225,6 @@ input:focus + .slider {
   transition: .4s;
 }
 
-input:checked + .subtitle-slider {
-  background-color: #7083C0;
-}
-
-input:focus + .subtitle-slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
 input + .subtitle-slider:before {
   background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
   background-position: 50% 50%;
@@ -232,16 +238,4 @@ input:checked + .subtitle-slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
-}
-
-.subtitle-slider.round {
-  border-radius: 34px;
-}
-
-.subtitle-slider.round:before {
-  border-radius: 50%;
-}
-
-.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
-  border: 1px solid #C5D0F1;
 }
