@@ -142,6 +142,12 @@ input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
+input + .slider:before {
+  background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat, no-repeat;
+}
+
 input:checked + .slider:before {
   background-image: url('../images/checkmark.png');
   background-position: 50% 50%;
@@ -211,6 +217,12 @@ input:checked + .subtitle-slider {
 
 input:focus + .subtitle-slider {
   box-shadow: 0 0 1px #2196F3;
+}
+
+input + .subtitle-slider:before {
+  background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat, no-repeat;
 }
 
 input:checked + .subtitle-slider:before {
