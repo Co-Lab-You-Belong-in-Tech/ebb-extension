@@ -6,7 +6,7 @@ const reloadMessageBox = document.querySelector("#reload-message");
 
 function displayMessage() {
     console.log('displaying message');
-    reloadMessageBox.textContent = "Reload page to view GIFs again.";
+    reloadMessageBox.textContent = "Please reload this page to see the GIFs.";
 };
 
 function removeMessage() {
