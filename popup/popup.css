@@ -48,6 +48,12 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
+}
+
+#reload-message {
+  color: yellow;
+  font-size: 14px;
 }
 
 .vanishGifs, .pauseGifs, .altText {

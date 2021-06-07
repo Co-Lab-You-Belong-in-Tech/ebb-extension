@@ -2,10 +2,17 @@ var toggleAll = document.querySelector("input[name=toggleAll]");
 var vanish = document.querySelector("input[name=vanish]");
 var pause = document.querySelector("input[name=pause]");
 var displayAlt = document.querySelector("input[name=displayAlt]");
+const reloadMessageBox = document.querySelector("#reload-message");
 
-const reloadMessageField = document.querySelector("#reload-message");
-const messageBox = document.createElement('span');
+function displayMessage() {
+    console.log('displaying message');
+    reloadMessageBox.textContent = "Reload page to view GIFs again.";
+};
 
+function removeMessage() {
+    console.log('removing message');
+    reloadMessageBox.textContent = "";
+};
 
 toggleAll.addEventListener("change", function() {
     if (this.checked) {
@@ -30,26 +37,23 @@ toggleAll.addEventListener("change", function() {
         chrome.storage.sync.set({
             toggleAll: false
         });
-    }
+    };
 });
 
 
 // event listener for Hide all Gifs toogle
 vanish.addEventListener("change", function() {
-    console.log('I changed the toggle!');
     if (vanish.checked) {
         chrome.storage.sync.set({
             vanish: true
         });
-        console.log('I checked this one toggle!');
         removeMessage();
     } else {
         chrome.storage.sync.set({
             vanish: false
         });
-        console.log('I unchecked the toggle!');
         displayMessage();
-    }
+    };
 });
 
 // event listener for pause gifs
@@ -59,11 +63,13 @@ pause.addEventListener("change", function() {
         chrome.storage.sync.set({
             pause: true
         });
+        removeMessage();
     } else {
         chrome.storage.sync.set({
             pause: false
         });
-    }
+        displayMessage();
+    };
 });
 
 //event listener for display alternative text 
@@ -72,14 +78,14 @@ displayAlt.addEventListener("change", function() {
         chrome.storage.sync.set({
             displayAlt: true
         });
-
+        removeMessage();
     } else {
         chrome.storage.sync.set({
             displayAlt: false
         });
-    }
+        displayMessage();
+    };
 });
-
 
 //html checkbox elements stored as an array of keys
 var selections = [toggleAll, vanish, pause, displayAlt];
@@ -98,30 +104,10 @@ function showChecked() {
                  it has to be escaped before it can be used as part of a selector.
                 */
                 document.querySelector("input[name=" + CSS.escape(v) + "]").setAttribute("checked", " ");
-            }
-
+            };
         });
     });
 
-}
+};
 
 window.addEventListener("DOMContentLoaded", showChecked);
-
-
-function displayMessage() {
-    console.log('displaying message');
-
-    reloadMessageField.textContent = "Reload page to view GIFs again."
-    
-    // messageBox.textContent = "Reload page to view GIFs again."
-
-    // reloadMessageField.appendChild(messageBox);
-};
-
-function removeMessage() {
-    console.log('removing message');
-    // reloadMessageField.removeChild(messageBox);
-
-    reloadMessageField.textContent = ""
-
-};
