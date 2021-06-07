@@ -1,26 +1,38 @@
 {
     "name": "ebb",
     "version": "0.0.0.1",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "description": "Chrome extension to mitigate on-screen movement.",
     "icons": {
-        "16": "icons/placeholder16x16.png",
-        "32": "icons/placeholder32x32.png",
-        "48": "icons/placeholder48x48.png",
-        "128": "icons/placeholder128x128.png"
+        "16": "icons/ebb16x16.png",
+        "48": "icons/ebb48x48.png",
+        "128": "icons/ebb128x128.png"
     },
-    "background": {
-        "scripts":["background.js"]  
-    },
-    "browser_action": {
+    "action": {
         "default_popup": "popup/popup.html"
+    },
+    "background":{
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
             "matches": [
                 "<all_urls>"
             ],
-            "js": ["lib/jquery.min.js","content-scripts/content.js"]
+            "js": ["lib/jquery.min.js","content-scripts/content.js"],
+            "run_at": "document_start"
         }
-    ]
+    ],
+    "permissions":["tabs","storage"],
+    "commands": {
+        "_execute_action": {
+          "suggested_key": {
+            "windows": "Ctrl+Shift+Y",
+            "mac": "MacCtrl+Shift+Y",
+            "chromeos": "Ctrl+Shift+U",
+            "linux": "Ctrl+Shift+J"
+          },
+          "description": "Opens popup.html"
+        }
+      }
 }

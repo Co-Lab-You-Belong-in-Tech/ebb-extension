@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ebb</title>
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <button type="button" id="vanishGif">ebb</button>
+    <header>
+        <img src="../images/ebbLogoLarge.png" alt="ebb logo">
+        <label class="switch" for="all">
+            <input type="checkbox" name="toggleAll" id="all" >
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <main>
+
+        <section class="gif-title">
+            <p class="text toggle-title">GIFs</p>
+        </section>
+
+        <section class="vanishGifs">
+            <label class="text toggle-subtitle" for="vanish">
+                Hide All GIFs
+            </label>
+            <input type="checkbox" name="vanish" class="subtitle-switch" id="vanish">
+            <span class="subtitle-slider vanish-slider round"></span>
+        </section>
+
+        <section class="pauseGifs">
+            <label class="text toggle-subtitle" for="pause">
+                Pause GIFs
+            </label>
+            <input type="checkbox" name="pause" class="subtitle-switch" id="pause">
+            <span class="subtitle-slider pause-slider round"></span>
+        </section>
+
+        <section class="altText">
+            <label class="text toggle-subtitle" for="displayAlt">
+                Display Alternative Text
+            </label>
+            <input type="checkbox" name="displayAlt" class="subtitle-switch" id="displayAlt">
+            <span class="subtitle-slider alt-slider round"></span>
+        </section>
+
+    </main>
+
     <script type="text/javascript" src="popup.js"></script>
 </body>
+
 </html>
