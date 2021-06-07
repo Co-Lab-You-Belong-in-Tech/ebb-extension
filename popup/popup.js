@@ -63,12 +63,10 @@ pause.addEventListener("change", function() {
         chrome.storage.sync.set({
             pause: true
         });
-        removeMessage();
     } else {
         chrome.storage.sync.set({
             pause: false
         });
-        displayMessage();
     };
 });
 
@@ -78,12 +76,10 @@ displayAlt.addEventListener("change", function() {
         chrome.storage.sync.set({
             displayAlt: true
         });
-        removeMessage();
     } else {
         chrome.storage.sync.set({
             displayAlt: false
         });
-        displayMessage();
     };
 });
 
