@@ -132,7 +132,6 @@ input:focus + .slider {
   -webkit-transition: .05s ease-in-out;
   transition: .05s ease-in-out; 
 }
-Display Alternative Text
 
 .slider:before {
   position: absolute;
