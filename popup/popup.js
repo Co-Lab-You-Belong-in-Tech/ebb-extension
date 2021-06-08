@@ -5,6 +5,12 @@ var displayAlt = document.querySelector("input[name=displayAlt]");
 const reloadMessageBox = document.querySelector("#reload-message");
 const sliders = document.querySelectorAll('span');
 
+function addTransition() {
+    sliders.forEach((slider) => {
+        slider.classList.add('slider-transition');
+    })
+};
+
 function displayMessage() {
     console.log('displaying message');
     reloadMessageBox.textContent = "Please reload this page to see the GIFs.";
@@ -17,9 +23,7 @@ function removeMessage() {
 
 toggleAll.addEventListener("change", function() {
     console.log('I want to add a class.');
-    sliders.forEach((slider) => {
-        slider.classList.add('slider-transition');
-    })
+    addTransition();
     if (this.checked) {
         chrome.storage.sync.set({
             toggleAll: true
@@ -48,6 +52,7 @@ toggleAll.addEventListener("change", function() {
 
 // event listener for Hide all Gifs toogle
 vanish.addEventListener("change", function() {
+    addTransition();
     if (vanish.checked) {
         chrome.storage.sync.set({
             vanish: true
@@ -63,6 +68,7 @@ vanish.addEventListener("change", function() {
 
 // event listener for pause gifs
 pause.addEventListener("change", function() {
+    addTransition();
     if (pause.checked) {
         //
         chrome.storage.sync.set({
@@ -77,6 +83,7 @@ pause.addEventListener("change", function() {
 
 //event listener for display alternative text 
 displayAlt.addEventListener("change", function() {
+    addTransition();
     if (displayAlt.checked) {
         chrome.storage.sync.set({
             displayAlt: true
