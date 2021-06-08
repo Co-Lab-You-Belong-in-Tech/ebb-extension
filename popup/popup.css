@@ -168,8 +168,7 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
-  transform: translateX(24pDisplay Alternative Text
-  x);
+  transform: translateX(24px);
 }
 
 input:focus + .slider, input:focus + .subtitle-slider {
