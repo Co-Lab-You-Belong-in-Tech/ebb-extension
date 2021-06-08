@@ -169,6 +169,7 @@ input:checked + .slider:before {
   x);
 }
 
+
 input:focus + .slider, input:focus + .subtitle-slider {
   box-shadow: 0 0 1px #2196F3;
 }
