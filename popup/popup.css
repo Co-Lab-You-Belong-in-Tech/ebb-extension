@@ -246,3 +246,39 @@ input:checked + .subtitle-slider:before {
   -ms-transform: translateX(16px);
   transform: translateX(16px);
 }
+
+.feedback{
+height: 34px;
+width: 400px;
+left: 340px;
+top: 458px;
+
+margin-top:auto;
+margin-bottom:auto;
+border-radius: 0px;
+
+background:#121212;
+}
+
+
+#feedtext{
+font-family: 'Open Sans';
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+color: #cdcfd4;
+}
+
+a{
+  font-family:'Open sans';
+  font-style: normal;
+  font-weight:bold;
+  text-decoration:underline;
+  font-size: 13px;
+  color: #cdcfd4;
+}
+
+
