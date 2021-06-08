@@ -101,7 +101,6 @@ function showChecked() {
             };
         });
     });
-
 };
 
 window.addEventListener("DOMContentLoaded", showChecked);
