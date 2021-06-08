@@ -3,6 +3,7 @@ var vanish = document.querySelector("input[name=vanish]");
 var pause = document.querySelector("input[name=pause]");
 var displayAlt = document.querySelector("input[name=displayAlt]");
 const reloadMessageBox = document.querySelector("#reload-message");
+const sliders = document.querySelectorAll('span');
 
 function displayMessage() {
     console.log('displaying message');
@@ -15,6 +16,10 @@ function removeMessage() {
 };
 
 toggleAll.addEventListener("change", function() {
+    console.log('I want to add a class.');
+    sliders.forEach((slider) => {
+        slider.classList.add('slider-transition');
+    })
     if (this.checked) {
         chrome.storage.sync.set({
             toggleAll: true
