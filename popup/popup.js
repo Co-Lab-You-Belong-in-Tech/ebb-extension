@@ -14,11 +14,25 @@ function removeMessage() {
     reloadMessageBox.textContent = "";
 };
 
+function setToggleAll(isChecked) {
+    chrome.storage.sync.set({ toggleAll: isChecked });
+};
+
+function setVanish(isChecked) {
+    chrome.storage.sync.set({ vanish: isChecked });
+};
+
+function setPause(isChecked) {
+    chrome.storage.sync.set({ pause: isChecked });
+};
+
+function setDisplayAlt(isChecked) {
+    chrome.storage.sync.set({ displayAlt: isChecked });
+};
+
 toggleAll.addEventListener("change", function() {
     if (this.checked) {
-        chrome.storage.sync.set({
-            toggleAll: true
-        });
+        setToggleAll(true);
         chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
@@ -27,31 +41,24 @@ toggleAll.addEventListener("change", function() {
                             tabId: tab.id
                         }
                     );
-                })
+                });
             }
         );
     } else {
         /* Removes the vanish effect
          when the toggle is clicked to the "off" position.
          */
-        chrome.storage.sync.set({
-            toggleAll: false
-        });
+         setToggleAll(false);
     };
 });
-
 
 // event listener for Hide all Gifs toogle
 vanish.addEventListener("change", function() {
     if (vanish.checked) {
-        chrome.storage.sync.set({
-            vanish: true
-        });
+        setVanish(true);
         removeMessage();
     } else {
-        chrome.storage.sync.set({
-            vanish: false
-        });
+        setVanish(false);
         displayMessage();
     };
 });
@@ -59,27 +66,18 @@ vanish.addEventListener("change", function() {
 // event listener for pause gifs
 pause.addEventListener("change", function() {
     if (pause.checked) {
-        //
-        chrome.storage.sync.set({
-            pause: true
-        });
+        setPause(true);
     } else {
-        chrome.storage.sync.set({
-            pause: false
-        });
+        setPause(false);
     };
 });
 
 //event listener for display alternative text 
 displayAlt.addEventListener("change", function() {
     if (displayAlt.checked) {
-        chrome.storage.sync.set({
-            displayAlt: true
-        });
+        setDisplayAlt(true);
     } else {
-        chrome.storage.sync.set({
-            displayAlt: false
-        });
+        setDisplayAlt(false);
     };
 });
 
