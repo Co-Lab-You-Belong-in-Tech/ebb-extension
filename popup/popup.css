@@ -153,13 +153,13 @@ input:focus + .slider {
 }
 
 input + .slider:before {
-  background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
+  background-image: url('../images/cross-large.svg');
   background-position: 50% 50%;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
 }
 
 input:checked + .slider:before {
-  background-image: url('../images/checkmark.png');
+  background-image: url('../images/checkmark-large.svg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-transform: translateX(24px);
@@ -233,13 +233,13 @@ input:checked + .slider, input:checked + .subtitle-slider {
 }
 
 input + .subtitle-slider:before {
-  background-image: url('../images/xForwardslash.png'), url('../images/xBackslash.png');
+  background-image: url('../images/cross-small.svg');
   background-position: 50% 50%;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
 }
 
 input:checked + .subtitle-slider:before {
-  background-image: url('../images/checkmark.png');
+  background-image: url('../images/checkmark-small.svg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-transform: translateX(16px);
