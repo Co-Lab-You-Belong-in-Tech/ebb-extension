@@ -9,8 +9,8 @@ body {
 
     height: 340px;
     width: 400px;
-    left: 690px;
-    top: 61px;
+    top: 152px;
+    left: 340px;
 
     border-radius: 0px;
     box-shadow: 0px 0px 4px 0px #000000F2;
@@ -18,6 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    font-family: 'Open Sans', Verdana, sans-serif;
 }
 
 header {
@@ -28,7 +30,6 @@ header {
 }
 
 img {
-  height: 30%;
   width: 30%;
 }
 
@@ -93,7 +94,6 @@ main {
   border-radius: nullpx;
 
   color: #F3F3F3;
-  font-family: 'Open Sans', Verdana, sans-serif;
   font-style: normal;
   line-height: 20px;
   letter-spacing: 0em;
@@ -251,38 +251,35 @@ input:checked + .subtitle-slider:before {
   transform: translateX(16px);
 }
 
-.feedback{
-height: 34px;
-width: 400px;
-left: 340px;
-top: 458px;
+footer {
+	background: #121212;
+  color: #cdcfd4;
 
-margin-top:auto;
-margin-bottom:auto;
-border-radius: 0px;
+	height: 34px;
+	width: 400px;
+	top: 458px;
+	left: 340px;
+	text-align: center;
 
-background:#121212;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+	justify-content: center;
 }
 
-
-#feedtext{
-font-family: 'Open Sans';
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0em;
-text-align: center;
-color: #cdcfd4;
+#feedtext {
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
 }
 
-a{
-  font-family:'Open sans';
-  font-style: normal;
-  font-weight:bold;
-  text-decoration:underline;
-  font-size: 13px;
+a {
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 13px;
   color: #cdcfd4;
 }
-
-
