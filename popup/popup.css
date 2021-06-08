@@ -111,7 +111,7 @@ input + .slider {
 }
 
 input:focus + .slider {
-  border: 2px solid #C5D0F1;
+  border: 2px solid white;
 }
 
 .switch {
