@@ -8,7 +8,7 @@ const sliders = document.querySelectorAll('span');
 function addTransition() {
     sliders.forEach((slider) => {
         slider.classList.add('slider-transition');
-    })
+    });
 };
 
 function displayMessage() {
@@ -48,7 +48,6 @@ toggleAll.addEventListener("change", function() {
         });
     };
 });
-
 
 // event listener for Hide all Gifs toogle
 vanish.addEventListener("change", function() {
@@ -115,7 +114,6 @@ function showChecked() {
             };
         });
     });
-
 };
 
 window.addEventListener("DOMContentLoaded", showChecked);
