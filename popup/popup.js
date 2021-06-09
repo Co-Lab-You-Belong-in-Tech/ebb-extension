@@ -9,12 +9,10 @@ function addTransition() {
 };
 
 function displayMessage() {
-    console.log('displaying message');
     reloadMessageBox.textContent = "Please reload page to see the GIFs and animations.";
 };
 
 function removeMessage() {
-    console.log('removing message');
     reloadMessageBox.textContent = "";
 };
 
@@ -47,7 +45,6 @@ function showChecked() {
 };
 
 vanish.addEventListener("change", function() {
-    console.log('I want to add a class.');
     addTransition();
     if (this.checked) {
         setVanishStorage(true);
