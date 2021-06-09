@@ -65,35 +65,6 @@ vanish.addEventListener("change", function() {
     };
 });
 
-// event listener for pause gifs
-pause.addEventListener("change", function() {
-    addTransition();
-    if (pause.checked) {
-        //
-        chrome.storage.sync.set({
-            pause: true
-        });
-    } else {
-        chrome.storage.sync.set({
-            pause: false
-        });
-    };
-});
-
-//event listener for display alternative text 
-displayAlt.addEventListener("change", function() {
-    addTransition();
-    if (displayAlt.checked) {
-        chrome.storage.sync.set({
-            displayAlt: true
-        });
-    } else {
-        chrome.storage.sync.set({
-            displayAlt: false
-        });
-    };
-});
-
 //html checkbox elements stored as an array of keys
 var selections = [toggleAll, vanish, pause, displayAlt];
 

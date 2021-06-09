@@ -18,7 +18,6 @@ body {
   font-family: 'Open Sans', Verdana, sans-serif;
 }
 
-
 header {
   display:flex;
   justify-content:space-between;
@@ -62,7 +61,7 @@ main {
   border-radius: nullpx;
 }
 
-.vanishGifs, .pauseGifs, .altText {
+.vanishGifs {
   background: linear-gradient(180deg, #303541 0%, #3D414D 100%);
   border: 1px solid;
   border-radius: 10px;
@@ -80,7 +79,7 @@ main {
   justify-content: space-between;
 }
 
-.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
+.vanishGifs:focus-within {
   border: 1px solid #C5D0F1;
 }
 
