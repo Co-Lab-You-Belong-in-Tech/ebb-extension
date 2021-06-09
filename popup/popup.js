@@ -22,29 +22,6 @@ function setVanishStorage(isChecked) {
     chrome.storage.sync.set({ vanish: isChecked });
 };
 
-vanish.addEventListener("change", function() {
-    console.log('I want to add a class.');
-    addTransition();
-    removeMessage();
-    if (this.checked) {
-        setVanishStorage(true)
-        chrome.tabs.query({},
-            function(tabs) {
-                tabs.forEach(function(tab) {
-                    chrome.tabs.sendMessage(
-                        tab.id, {
-                            tabId: tab.id
-                        }
-                    );
-                })
-            }
-        );
-    } else {
-        setVanishStorage(false);
-        displayMessage();
-    };
-});
-
 //html checkbox elements stored as an array of keys
 const selections = [vanish];
 
@@ -68,5 +45,28 @@ function showChecked() {
         });
     });
 };
+
+vanish.addEventListener("change", function() {
+    console.log('I want to add a class.');
+    addTransition();
+    if (this.checked) {
+        setVanishStorage(true);
+        removeMessage();
+        chrome.tabs.query({},
+            function(tabs) {
+                tabs.forEach(function(tab) {
+                    chrome.tabs.sendMessage(
+                        tab.id, {
+                            tabId: tab.id
+                        }
+                    );
+                })
+            }
+        );
+    } else {
+        setVanishStorage(false);
+        displayMessage();
+    };
+});
 
 window.addEventListener("DOMContentLoaded", showChecked);
