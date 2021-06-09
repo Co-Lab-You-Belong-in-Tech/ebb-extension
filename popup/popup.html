@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ebb</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="../images/ebbLogo_darkBkgd.svg" alt="ebb logo">
+    </header>
+    <main>
+        <section class="gif-title">
+            <p id="reload-message" class="text"></p>
+        </section>
+        <section class="vanishGifs">
+            <label class="text toggle-subtitle" for="vanish">
+                Hide GIFs and Pause Animations
+            </label>
+            <input type="checkbox" name="vanish" class="subtitle-switch" id="vanish">
+            <span class="subtitle-slider vanish-slider round"></span>
+        </section>
+    </main>
+    <footer>
+        <p id="feedtext">
+            Have feedback about Ebb? <a href="https://forms.gle/hzfP8fiSq69QFeHn7" target="_blank" rel="noreferrer">Click here!</a>
+        </p>
+    </footer>
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
