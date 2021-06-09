@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(0deg, rgba(55, 87, 149, 0.2), rgba(55, 87, 149, 0.2)), linear-gradient(0deg, #121212, #121212);
 
-  height: 340px;
+  height: 217px;
   width: 400px;
   left: 690px;
   top: 61px;
@@ -17,7 +17,6 @@ body {
 
   font-family: 'Open Sans', Verdana, sans-serif;
 }
-
 
 header {
   display:flex;
@@ -53,11 +52,16 @@ main {
 }
 
 #reload-message {
-  color: yellow;
+  color: #CDCFD4;
   font-size: 14px;
+  height: 27px;
+  width: 358px;
+  left: 360px;
+  top: 224px;
+  border-radius: nullpx;
 }
 
-.vanishGifs, .pauseGifs, .altText {
+.vanishGifs {
   background: linear-gradient(180deg, #303541 0%, #3D414D 100%);
   border: 1px solid;
   border-radius: 10px;
@@ -75,7 +79,7 @@ main {
   justify-content: space-between;
 }
 
-.vanishGifs:focus-within, .pauseGifs:focus-within, .altText:focus-within {
+.vanishGifs:focus-within {
   border: 1px solid #C5D0F1;
 }
 

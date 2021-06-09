@@ -13,7 +13,7 @@ function addTransition() {
 
 function displayMessage() {
     console.log('displaying message');
-    reloadMessageBox.textContent = "Please reload this page to see the GIFs.";
+    reloadMessageBox.textContent = "Please reload page to see the GIFs and animations.";
 };
 
 function removeMessage() {
@@ -62,35 +62,6 @@ vanish.addEventListener("change", function() {
             vanish: false
         });
         displayMessage();
-    };
-});
-
-// event listener for pause gifs
-pause.addEventListener("change", function() {
-    addTransition();
-    if (pause.checked) {
-        //
-        chrome.storage.sync.set({
-            pause: true
-        });
-    } else {
-        chrome.storage.sync.set({
-            pause: false
-        });
-    };
-});
-
-//event listener for display alternative text 
-displayAlt.addEventListener("change", function() {
-    addTransition();
-    if (displayAlt.checked) {
-        chrome.storage.sync.set({
-            displayAlt: true
-        });
-    } else {
-        chrome.storage.sync.set({
-            displayAlt: false
-        });
     };
 });
 
