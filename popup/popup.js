@@ -45,24 +45,25 @@ vanish.addEventListener("change", function() {
     };
 });
 
-
 //html checkbox elements stored as an array of keys
 const selections = [vanish];
 
 function showChecked() {
     selections.forEach(function(checkbox) {
-        /*each element in selections is a checkbox,
+        /*
+        each element in selections is a checkbox,
         by retrieving its element.name it can now be used as
         key for chrome.storage.sync.get
          */
 
-        const v = checkbox.name;
-        chrome.storage.sync.get([v], function(data) {
-            if (data[v]) {
-                /*Note that since type of v is string
+        const toggle = checkbox.name;
+        chrome.storage.sync.get([toggle], function(data) {
+            if (data[toggle]) {
+                /*
+                Note that since type of toggle is string
                  it has to be escaped before it can be used as part of a selector.
                 */
-                document.querySelector("input[name=" + CSS.escape(v) + "]").setAttribute("checked", " ");
+                document.querySelector("input[name=" + CSS.escape(toggle) + "]").setAttribute("checked", " ");
             };
         });
     });
