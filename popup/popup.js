@@ -13,7 +13,7 @@ function addTransition() {
 
 function displayMessage() {
     console.log('displaying message');
-    reloadMessageBox.textContent = "Please reload this page to see the GIFs.";
+    reloadMessageBox.textContent = "Please reload this page to see the GIFs and resume animations.";
 };
 
 function removeMessage() {
