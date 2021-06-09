@@ -1,7 +1,4 @@
-var toggleAll = document.querySelector("input[name=toggleAll]");
-var vanish = document.querySelector("input[name=vanish]");
-var pause = document.querySelector("input[name=pause]");
-var displayAlt = document.querySelector("input[name=displayAlt]");
+const vanish = document.querySelector("input[name=vanish]");
 const reloadMessageBox = document.querySelector("#reload-message");
 const sliders = document.querySelectorAll('span');
 
@@ -21,13 +18,40 @@ function removeMessage() {
     reloadMessageBox.textContent = "";
 };
 
-toggleAll.addEventListener("change", function() {
+function setVanishStorage(isChecked) {
+    chrome.storage.sync.set({ vanish: isChecked });
+};
+
+//html checkbox elements stored as an array of keys
+const selections = [vanish];
+
+function showChecked() {
+    selections.forEach(function(checkbox) {
+        /*
+        each element in selections is a checkbox,
+        by retrieving its element.name it can now be used as
+        key for chrome.storage.sync.get
+         */
+
+        const toggle = checkbox.name;
+        chrome.storage.sync.get([toggle], function(data) {
+            if (data[toggle]) {
+                /*
+                Note that since type of toggle is string
+                 it has to be escaped before it can be used as part of a selector.
+                */
+                document.querySelector("input[name=" + CSS.escape(toggle) + "]").setAttribute("checked", " ");
+            };
+        });
+    });
+};
+
+vanish.addEventListener("change", function() {
     console.log('I want to add a class.');
     addTransition();
     if (this.checked) {
-        chrome.storage.sync.set({
-            toggleAll: true
-        });
+        setVanishStorage(true);
+        removeMessage();
         chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
@@ -40,51 +64,9 @@ toggleAll.addEventListener("change", function() {
             }
         );
     } else {
-        /* Removes the vanish effect
-         when the toggle is clicked to the "off" position.
-         */
-        chrome.storage.sync.set({
-            toggleAll: false
-        });
-    };
-});
-
-// event listener for Hide all Gifs toogle
-vanish.addEventListener("change", function() {
-    addTransition();
-    if (vanish.checked) {
-        chrome.storage.sync.set({
-            vanish: true
-        });
-        removeMessage();
-    } else {
-        chrome.storage.sync.set({
-            vanish: false
-        });
+        setVanishStorage(false);
         displayMessage();
     };
 });
-
-//html checkbox elements stored as an array of keys
-var selections = [toggleAll, vanish, pause, displayAlt];
-
-function showChecked() {
-    selections.forEach(function(checkbox) {
-        /*each element in selections is a checkbox,
-        by retrieving its element.name it can now be used as
-        key for chrome.storage.sync.get
-         */
-
-        var v = checkbox.name;
-        chrome.storage.sync.get([v], function(data) {
-            if (data[v]) {
-                /*Note that since type of v is string
-                 it has to be escaped before it can be used as part of a selector.
-                */
-                document.querySelector("input[name=" + CSS.escape(v) + "]").setAttribute("checked", " ");
-            };
-        });
-    });
-};
 
 window.addEventListener("DOMContentLoaded", showChecked);
