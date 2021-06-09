@@ -1,4 +1,3 @@
-
 chrome.tabs.onUpdated.addListener(function(id, info, tab) {
     chrome.storage.sync.get("vanish", function(data){
         if(data["vanish"]){
@@ -7,10 +6,6 @@ chrome.tabs.onUpdated.addListener(function(id, info, tab) {
                     tabId: tab.id
                 }
             );
-        }
+        };
     });
 });
-
-
-   
-    

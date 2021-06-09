@@ -143,20 +143,20 @@ input:focus + .slider {
 }
 
 .slider:before {
-position: absolute;
-content: "";
-height: 24px;
-width: 24px;
-left: 4px;
-bottom: 3px;
-background-color: #F1F1F1;
-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #F1F1F1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 
 input + .slider:before {
-background-image: url('../images/cross-large.svg');
-background-position: 50% 50%;
-background-repeat: no-repeat;
+  background-image: url('../images/cross-large.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 input:checked + .slider:before {
