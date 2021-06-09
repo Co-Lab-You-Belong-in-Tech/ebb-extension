@@ -18,14 +18,16 @@ function removeMessage() {
     reloadMessageBox.textContent = "";
 };
 
+function setVanishStorage(isChecked) {
+    chrome.storage.sync.set({ vanish: isChecked });
+};
+
 vanish.addEventListener("change", function() {
     console.log('I want to add a class.');
     addTransition();
     removeMessage();
     if (this.checked) {
-        chrome.storage.sync.set({
-            vanish: true
-        });
+        setVanishStorage(true)
         chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
@@ -38,9 +40,7 @@ vanish.addEventListener("change", function() {
             }
         );
     } else {
-        chrome.storage.sync.set({
-            vanish: false
-        });
+        setVanishStorage(false);
         displayMessage();
     };
 });
@@ -56,7 +56,7 @@ function showChecked() {
         key for chrome.storage.sync.get
          */
 
-        var v = checkbox.name;
+        const v = checkbox.name;
         chrome.storage.sync.get([v], function(data) {
             if (data[v]) {
                 /*Note that since type of v is string
