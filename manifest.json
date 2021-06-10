@@ -24,7 +24,7 @@
             "run_at": "document_start"
         }
     ],
-    "permissions":["tabs","storage"],
+    "permissions":["storage"],
     "commands": {
         "_execute_action": {
           "suggested_key": {
