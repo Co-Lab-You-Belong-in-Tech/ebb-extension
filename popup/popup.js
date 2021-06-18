@@ -1,5 +1,7 @@
 const mainToggle = document.querySelector("input[name=main-toggle]");
-const vanish = document.querySelector("input[name=vanish-toggle]");
+const vanishGifs = document.querySelector("input[name=vanish-toggle]");
+const pauseGifs = document.querySelector("input[name=pause-toggle]");
+const altText = document.querySelector("input[name=alt-text-toggle]");
 const reloadMessageBox = document.querySelector("#reload-message");
 const sliders = document.querySelectorAll('span');
 
@@ -21,12 +23,20 @@ function setMainToggleStorage(isChecked) {
     chrome.storage.sync.set({ "main-toggle": isChecked });
 };
 
-function setVanishStorage(isChecked) {
+function setVanishGifsStorage(isChecked) {
     chrome.storage.sync.set({ "vanish-toggle": isChecked });
 };
 
+function setPauseGifsStorage(isChecked) {
+    chrome.storage.sync.set({ "pause-toggle": isChecked });
+};
+
+function setAltTextStorage(isChecked) {
+    chrome.storage.sync.set({ "alt-text-toggle": isChecked });
+};
+
 //html checkbox elements stored as an array of keys
-const selections = [mainToggle, vanish];
+const selections = [mainToggle, vanishGifs, pauseGifs, altText];
 
 function showChecked() {
     selections.forEach(function(checkbox) {
@@ -71,10 +81,10 @@ mainToggle.addEventListener("change", function() {
     };
 });
 
-vanish.addEventListener("change", function() {
+vanishGifs.addEventListener("change", function() {
     addTransition();
     if (this.checked) {
-        setVanishStorage(true);
+        setVanishGifsStorage(true);
         removeMessage();
         chrome.tabs.query({},
             function(tabs) {
@@ -88,8 +98,28 @@ vanish.addEventListener("change", function() {
             }
         );
     } else {
-        setVanishStorage(false);
+        setVanishGifsStorage(false);
         displayMessage();
+    };
+});
+
+// event listener for pause gifs
+pauseGifs.addEventListener("change", function() {
+    addTransition();
+    if (pause.checked) {
+        setPauseGifsStorage(true);
+    } else {
+        setPauseGifsStorage(false);
+    };
+});
+    
+//event listener for display alternative text
+altText.addEventListener("change", function() {
+    addTransition();
+    if (altText.checked) {
+        setAltTextStorage(true);
+    } else {
+        setAltTextStorage(false);
     };
 });
 

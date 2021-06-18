@@ -55,7 +55,7 @@ main {
   border-radius: nullpx;
 }
 
-.vanish-gifs {
+.vanish-gifs, .pause-gifs, .alt-text {
   background: linear-gradient(180deg, #303541 0%, #3D414D 100%);
   border: 1px solid;
   border-radius: 10px;
@@ -71,7 +71,7 @@ main {
   justify-content: space-between;
 }
 
-.vanish-gifs:focus-within {
+.vanish-gifs:focus-within, .pause-gifs:focus-within, .alt-text:focus-within {
   border: 1px solid #C5D0F1;
 }
 
