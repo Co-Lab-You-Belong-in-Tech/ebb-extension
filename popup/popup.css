@@ -55,7 +55,7 @@ main {
   border-radius: nullpx;
 }
 
-.vanishGifs {
+.vanish-gifs {
   background: linear-gradient(180deg, #303541 0%, #3D414D 100%);
   border: 1px solid;
   border-radius: 10px;
@@ -71,7 +71,7 @@ main {
   justify-content: space-between;
 }
 
-.vanishGifs:focus-within {
+.vanish-gifs:focus-within {
   border: 1px solid #C5D0F1;
 }
 
@@ -240,7 +240,6 @@ footer {
 
 	height: 34px;
 	width: 400px;
-	
 	text-align: center;
 
   margin-top: 15px;

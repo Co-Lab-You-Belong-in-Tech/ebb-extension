@@ -1,5 +1,5 @@
 const mainToggle = document.querySelector("input[name=main-toggle]");
-const vanish = document.querySelector("input[name=vanish]");
+const vanish = document.querySelector("input[name=vanish-toggle]");
 const reloadMessageBox = document.querySelector("#reload-message");
 const sliders = document.querySelectorAll('span');
 
@@ -22,7 +22,7 @@ function setMainToggleStorage(isChecked) {
 };
 
 function setVanishStorage(isChecked) {
-    chrome.storage.sync.set({ "vanish": isChecked });
+    chrome.storage.sync.set({ "vanish-toggle": isChecked });
 };
 
 //html checkbox elements stored as an array of keys
