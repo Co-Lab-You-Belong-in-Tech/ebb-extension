@@ -9,8 +9,6 @@ body {
 
   height: 217px;
   width: 400px;
-  left: 690px;
-  top: 61px;
 
   border-radius: 0px;
   box-shadow: 0px 0px 4px 0px #000000F2;
@@ -41,8 +39,6 @@ main {
   border-radius: 10px;
   height: 35px;
   width: 360px;
-  left: 710px;
-  top: 173px;
   margin: 10px;
 
   display: flex;
@@ -56,8 +52,6 @@ main {
   font-size: 14px;
   height: 27px;
   width: 358px;
-  left: 360px;
-  top: 224px;
   border-radius: nullpx;
 }
 
@@ -69,8 +63,6 @@ main {
   box-shadow: 0px 0px 3px 0px #00000066;
   height: 54px;
   width: 360px;
-  left: 710px;
-  top: 173px;
   margin: 5px;
   padding: 10px;
   display: flex;
@@ -86,8 +78,6 @@ main {
 .text {
   height: 20px;
   width: fit-content;
-  left: 726.76953125px;
-  top: 191px;
   border-radius: nullpx;
   color: #F3F3F3;
   font-style: normal;
@@ -127,6 +117,7 @@ input:focus + .slider {
   height: 0;
 }
 
+/* this selector is applied to and removed from toggles onclick */
 .slider-transition, .slider-transition:before {
   -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out; 
@@ -249,8 +240,7 @@ footer {
 
 	height: 34px;
 	width: 400px;
-	top: 458px;
-	left: 340px;
+	
 	text-align: center;
 
   margin-top: 15px;
