@@ -1,3 +1,4 @@
+const mainToggle = document.querySelector("input[name=main-toggle]");
 const vanish = document.querySelector("input[name=vanish]");
 const reloadMessageBox = document.querySelector("#reload-message");
 const sliders = document.querySelectorAll('span');
@@ -16,12 +17,16 @@ function removeMessage() {
     reloadMessageBox.textContent = "";
 };
 
+function setMainToggleStorage(isChecked) {
+    chrome.storage.sync.set({ "main-toggle": isChecked });
+};
+
 function setVanishStorage(isChecked) {
-    chrome.storage.sync.set({ vanish: isChecked });
+    chrome.storage.sync.set({ "vanish": isChecked });
 };
 
 //html checkbox elements stored as an array of keys
-const selections = [vanish];
+const selections = [mainToggle, vanish];
 
 function showChecked() {
     selections.forEach(function(checkbox) {
@@ -43,6 +48,28 @@ function showChecked() {
         });
     });
 };
+
+mainToggle.addEventListener("change", function() {
+    addTransition();
+    if (this.checked) {
+        setMainToggleStorage(true);
+        removeMessage();
+        chrome.tabs.query({},
+            function(tabs) {
+                tabs.forEach(function(tab) {
+                    chrome.tabs.sendMessage(
+                        tab.id, {
+                            tabId: tab.id
+                        }
+                    );
+                });
+            }
+        );
+    } else {
+        setMainToggleStorage(false);
+        displayMessage();
+    };
+});
 
 vanish.addEventListener("change", function() {
     addTransition();
