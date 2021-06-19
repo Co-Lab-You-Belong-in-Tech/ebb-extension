@@ -77,9 +77,9 @@ main {
   justify-content: space-between;
 }
 
-.alt-text:focus-within,
-.pause-gifs:focus-within,
-.vanish-gifs:focus-within {
+#alt-text:focus-within,
+#pause-gifs:focus-within,
+#vanish-gifs:focus-within {
   border: 1px solid #C5D0F1;
 }
 
