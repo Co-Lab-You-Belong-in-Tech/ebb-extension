@@ -58,9 +58,7 @@ main {
   font-size: 14px;
 }
 
-#alt-text,
-#pause-gifs,
-#vanish-gifs {
+.toggle-section {
   background: linear-gradient(180deg, #303541 0%, #3D414D 100%);
   border: 1px solid;
   border-radius: 10px;
@@ -77,9 +75,7 @@ main {
   justify-content: space-between;
 }
 
-#alt-text:focus-within,
-#pause-gifs:focus-within,
-#vanish-gifs:focus-within {
+.toggle-section:focus-within {
   border: 1px solid #C5D0F1;
 }
 
