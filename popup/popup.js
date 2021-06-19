@@ -63,21 +63,21 @@ mainToggle.addEventListener("change", function() {
     addTransition();
     if (this.checked) {
         setMainToggleStorage(true);
-        removeMessage();
-        chrome.tabs.query({},
-            function(tabs) {
-                tabs.forEach(function(tab) {
-                    chrome.tabs.sendMessage(
-                        tab.id, {
-                            tabId: tab.id
-                        }
-                    );
-                });
-            }
-        );
+        // removeMessage();
+        // chrome.tabs.query({},
+        //     function(tabs) {
+        //         tabs.forEach(function(tab) {
+        //             chrome.tabs.sendMessage(
+        //                 tab.id, {
+        //                     tabId: tab.id
+        //                 }
+        //             );
+        //         });
+        //     }
+        // );
     } else {
         setMainToggleStorage(false);
-        displayMessage();
+        // displayMessage();
     };
 });
 

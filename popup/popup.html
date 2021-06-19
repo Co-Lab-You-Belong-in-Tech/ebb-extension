@@ -14,36 +14,36 @@
 <body>
     <header>
         <img src="../images/ebbLogo_darkBkgd.svg" alt="ebb logo">
-        <label class="switch" for="all">
-            <input type="checkbox" name="main-toggle" id="all" >
-            <span class="slider round"></span>
+        <label class="main-switch" for="all">
+            <input type="checkbox" name="main-toggle" class="main-input" id="all" >
+            <span class="main-slider"></span>
         </label>
     </header>
     <main>
-        <section class="gif-title">
-            <!-- <p class="text toggle-title">GIFs</p> -->
+        <section id="message-section">
+            <!-- <p class="text gif-title">GIFs</p> -->
             <p id="reload-message" class="text"></p>
         </section>
-        <section class="vanish-gifs">
-            <label class="text toggle-subtitle" for="vanish">
+        <section id="vanish-gifs">
+            <label class="text subtitle-label" for="vanish">
                 Hide GIFs and Pause Animations
+                <input type="checkbox" name="vanish-toggle" class="subtitle-switch" id="vanish">
+                <span class="subtitle-slider vanish-slider"></span>
             </label>
-            <input type="checkbox" name="vanish-toggle" class="subtitle-switch" id="vanish">
-            <span class="subtitle-slider vanish-slider round"></span>
         </section>
-        <section class="pause-gifs">
-            <label class="text toggle-subtitle" for="pause">
+        <section id="pause-gifs">
+            <label class="text subtitle-label" for="pause">
                 Pause GIFs
+                <input type="checkbox" name="pause-toggle" class="subtitle-switch" id="pause">
+                <span class="subtitle-slider pause-slider"></span>
             </label>
-            <input type="checkbox" name="pause-toggle" class="subtitle-switch" id="pause">
-            <span class="subtitle-slider pause-slider round"></span>
         </section>
-        <section class="alt-text">
-            <label class="text toggle-subtitle" for="alt-text">
+        <section id="alt-text">
+            <label class="text subtitle-label" for="alt-text">
                 Display Alternative Text
+                <input type="checkbox" name="alt-text-toggle" class="subtitle-switch" id="alt-text">
+                <span class="subtitle-slider alt-slider"></span>
             </label>
-            <input type="checkbox" name="alt-text-toggle" class="subtitle-switch" id="alt-text">
-            <span class="subtitle-slider alt-slider round"></span>
         </section>
     </main>
     <footer>
