@@ -1,6 +1,7 @@
 # ebb-extension
 
 Chrome extension to mitigate on-screen movement.
+
 Have you ever experienced increased eye strain, headaches, distractibility, and or frustration after surfing the web? If so, give Ebb a try! 
 
 Ebb is a free Chrome extension that reduces the appearance of moving site components, like GIFs and CSS animations, which can be a common trigger for people with various neurological and sensory conditions, like ADHD, photophobia, chronic fatigue, migraines. Thus, by minimizing on-screen movements, Ebb can help people like you have safer and less painful online experiences, making web browsing more inclusive and accessible.
