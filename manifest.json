@@ -1,5 +1,5 @@
 {
-    "name": "ebb2",
+    "name": "ebb",
     "version": "0.0.0.2",
     "manifest_version": 3,
     "description": "Chrome extension to mitigate on-screen movement.",

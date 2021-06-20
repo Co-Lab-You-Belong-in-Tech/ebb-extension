@@ -14,9 +14,9 @@
 <body>
     <header>
         <img src="../images/ebbLogo_darkBkgd.svg" alt="ebb logo">
-        <label class="main-switch" for="all">
+        <label class="main-label" for="all">
             <input type="checkbox" name="main-toggle" class="main-input" id="all" >
-            <span class="main-slider"></span>
+            <span class="main-toggle"></span>
         </label>
     </header>
     <main>
@@ -25,29 +25,29 @@
             <p id="reload-message" class="text"></p>
         </section>
         <section class="toggle-section">
-            <label class="text subtitle-label" for="vanish">
+            <label class="text sub-label" for="vanish">
                 Hide GIFs and Pause Animations
-                <input type="checkbox" name="vanish-toggle" class="subtitle-switch" id="vanish">
-                <span class="subtitle-slider vanish-slider"></span>
+                <input type="checkbox" name="vanish-gifs-toggle" class="sub-input" id="vanish">
+                <span class="sub-toggle vanish-toggle"></span>
             </label>
         </section>
         <section class="toggle-section">
-            <label class="text subtitle-label" for="pause">
+            <label class="text sub-label" for="pause">
                 Pause GIFs
-                <input type="checkbox" name="pause-toggle" class="subtitle-switch" id="pause">
-                <span class="subtitle-slider pause-slider"></span>
+                <input type="checkbox" name="pause-gifs-toggle" class="sub-input" id="pause">
+                <span class="sub-toggle pause-toggle"></span>
             </label>
         </section>
         <section class="toggle-section">
-            <label class="text subtitle-label" for="alt">
+            <label class="text sub-label" for="alt">
                 Display Alternative Text
-                <input type="checkbox" name="alt-text-toggle" class="subtitle-switch" id="alt">
-                <span class="subtitle-slider alt-slider"></span>
+                <input type="checkbox" name="alt-text-toggle" class="sub-input" id="alt">
+                <span class="sub-toggle alt-toggle"></span>
             </label>
         </section>
     </main>
     <footer>
-        <p id="feedtext">
+        <p id="feedback-text">
             Have feedback about Ebb? <a href="https://forms.gle/hzfP8fiSq69QFeHn7" target="_blank" rel="noreferrer">Click here!</a>
         </p>
     </footer>

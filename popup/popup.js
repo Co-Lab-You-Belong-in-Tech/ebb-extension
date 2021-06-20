@@ -1,42 +1,46 @@
 const mainToggle = document.querySelector("input[name=main-toggle]");
-const vanishGifs = document.querySelector("input[name=vanish-toggle]");
-const pauseGifs = document.querySelector("input[name=pause-toggle]");
-const altText = document.querySelector("input[name=alt-text-toggle]");
+const vanishGifsToggle = document.querySelector("input[name=vanish-gifs-toggle]");
+const pauseGifsToggle = document.querySelector("input[name=pause-gifs-toggle]");
+const altTextToggle = document.querySelector("input[name=alt-text-toggle]");
 const reloadMessageBox = document.querySelector("#reload-message");
-const sliders = document.querySelectorAll('span');
+const toggles = document.querySelectorAll('span');
 
+// Adds transition every time a toggle is clicked
 function addTransition() {
-    sliders.forEach((slider) => {
-        slider.classList.add('slider-transition');
+    toggles.forEach((toggle) => {
+        toggle.classList.add('toggle-transition');
     });
 };
 
+// Displays message when a toggle is clicked off
 function displayMessage() {
     reloadMessageBox.textContent = "Please reload page to see the GIFs and animations.";
 };
 
+// Removes a displayed message when a toggle is clicked on again
 function removeMessage() {
     reloadMessageBox.textContent = "";
 };
 
+// Stores status of toggle (input): on (checked) or off (unchecked)
 function setMainToggleStorage(isChecked) {
     chrome.storage.sync.set({ "main-toggle": isChecked });
 };
 
 function setVanishGifsStorage(isChecked) {
-    chrome.storage.sync.set({ "vanish-toggle": isChecked });
+    chrome.storage.sync.set({ "vanish-gifs-toggle": isChecked });
 };
 
 function setPauseGifsStorage(isChecked) {
-    chrome.storage.sync.set({ "pause-toggle": isChecked });
+    chrome.storage.sync.set({ "pause-gifs-toggle": isChecked });
 };
 
 function setAltTextStorage(isChecked) {
     chrome.storage.sync.set({ "alt-text-toggle": isChecked });
 };
 
-//html checkbox elements stored as an array of keys
-const selections = [mainToggle, vanishGifs, pauseGifs, altText];
+// Inputs stored as an array of keys
+const selections = [mainToggle, vanishGifsToggle, pauseGifsToggle, altTextToggle];
 
 function showChecked() {
     selections.forEach(function(checkbox) {
@@ -64,6 +68,7 @@ mainToggle.addEventListener("change", function() {
     if (this.checked) {
         setMainToggleStorage(true);
         // removeMessage();
+        // This provides functionality for the main toggle to vanish GIFs and pause animations via content.js
         // chrome.tabs.query({},
         //     function(tabs) {
         //         tabs.forEach(function(tab) {
@@ -81,11 +86,12 @@ mainToggle.addEventListener("change", function() {
     };
 });
 
-vanishGifs.addEventListener("change", function() {
+vanishGifsToggle.addEventListener("change", function() {
     addTransition();
     if (this.checked) {
         setVanishGifsStorage(true);
         removeMessage();
+        // This provides functionality for the first sub-toggle to vanish GIFs and pause animations via content.js
         chrome.tabs.query({},
             function(tabs) {
                 tabs.forEach(function(tab) {
@@ -104,19 +110,19 @@ vanishGifs.addEventListener("change", function() {
 });
 
 // event listener for pause gifs
-pauseGifs.addEventListener("change", function() {
+pauseGifsToggle.addEventListener("change", function() {
     addTransition();
-    if (pause.checked) {
+    if (this.checked) {
         setPauseGifsStorage(true);
     } else {
         setPauseGifsStorage(false);
     };
 });
-    
+
 //event listener for display alternative text
-altText.addEventListener("change", function() {
+altTextToggle.addEventListener("change", function() {
     addTransition();
-    if (altText.checked) {
+    if (this.checked) {
         setAltTextStorage(true);
     } else {
         setAltTextStorage(false);
