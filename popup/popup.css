@@ -98,11 +98,11 @@ main {
   font-weight: 700;
 } */
 
-.main-label {
+/*.main-label {
   position: relative;
   width: 60px;
   height: 34px;
-}
+} */
 
 .sub-label {
   display: flex;
@@ -112,7 +112,7 @@ main {
   font-weight: 600;
 }
 
-.main-input,
+/*.main-input, */
 .sub-input { 
   opacity: 0;
   width: 0;
@@ -123,13 +123,13 @@ main {
   position: relative;
 }
 
-.main-toggle {
+/* .main-toggle {
   border: transparent solid 2px;
 }
 
 input:focus + .main-toggle {
   border: 2px solid white;
-}
+} */
 
 
 /* this selector is applied to and removed from toggles onclick */
@@ -139,7 +139,7 @@ input:focus + .main-toggle {
   transition: .4s ease-in-out; 
 }
 
-.main-toggle,
+/* .main-toggle, */
 .sub-toggle {
   background-color: #CDCFD4;
   border-radius: 34px;
@@ -147,12 +147,12 @@ input:focus + .main-toggle {
   cursor: pointer;
 }
 
-.main-toggle {
+/* .main-toggle {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-}
+} */
 
 .sub-toggle {
   height: 24px;
@@ -164,25 +164,25 @@ input:focus + .main-toggle {
   top: 124px;
 }
 
-.pause-toggle {
+/* .pause-toggle {
   top: 188px;
 }
 
 .alt-toggle {
   top: 252px;
-}
+} */
 
-input:focus + .main-toggle,
+/* input:focus + .main-toggle, */
 input:focus + .sub-toggle {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .main-toggle,
+/* input:checked + .main-toggle, */
 input:checked + .sub-toggle {
   background-color: #7083C0;
 }
 
-.main-toggle::before,
+/* .main-toggle::before, */
 .sub-toggle::before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -195,11 +195,11 @@ input:checked + .sub-toggle {
   content: "";
 }
 
-.main-toggle::before {
+/* .main-toggle::before {
   background-image: url('../images/cross-large.svg');
   height: 24px;
   width: 24px;
-}
+} */
 
 .sub-toggle::before {
   background-image: url('../images/cross-small.svg');
@@ -207,12 +207,12 @@ input:checked + .sub-toggle {
   width: 18px;
 }
 
-input:checked + .main-toggle::before {
+/* input:checked + .main-toggle::before {
   background-image: url('../images/checkmark-large.svg');
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
-}
+} */
 
 input:checked + .sub-toggle::before {
   background-image: url('../images/checkmark-small.svg');
