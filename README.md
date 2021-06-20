@@ -10,4 +10,5 @@ Ebb is designed with accessibility in-mind with elements like a simplistic user 
 
 So, do you want to browse more comfortably? Try surfing the web with Ebb!
 
+Available on the Chrome Web Store:
 https://chrome.google.com/webstore/detail/ebb/madmcmnfddadihndjcofieeeenbndlil
