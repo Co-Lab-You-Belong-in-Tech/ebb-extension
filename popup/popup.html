@@ -14,21 +14,40 @@
 <body>
     <header>
         <img src="../images/ebbLogo_darkBkgd.svg" alt="ebb logo">
+        <!-- <label class="main-label" for="all">
+            <input type="checkbox" name="main-toggle" class="main-input" id="all" >
+            <span class="main-toggle"></span>
+        </label> -->
     </header>
     <main>
-        <section class="gif-title">
+        <section id="message-section">
+            <!-- <p class="text gif-title">GIFs</p> -->
             <p id="reload-message" class="text"></p>
         </section>
-        <section class="vanishGifs">
-            <label class="text toggle-subtitle" for="vanish">
+        <section class="toggle-section">
+            <label class="text sub-label" for="vanish">
                 Hide GIFs and Pause Animations
+                <input type="checkbox" name="vanish-gifs-toggle" class="sub-input" id="vanish">
+                <span class="sub-toggle vanish-toggle"></span>
             </label>
-            <input type="checkbox" name="vanish" class="subtitle-switch" id="vanish">
-            <span class="subtitle-slider vanish-slider round"></span>
         </section>
+        <!-- <section class="toggle-section">
+            <label class="text sub-label" for="pause">
+                Pause GIFs
+                <input type="checkbox" name="pause-gifs-toggle" class="sub-input" id="pause">
+                <span class="sub-toggle pause-toggle"></span>
+            </label>
+        </section> -->
+        <!-- <section class="toggle-section">
+            <label class="text sub-label" for="alt">
+                Display Alternative Text
+                <input type="checkbox" name="alt-text-toggle" class="sub-input" id="alt">
+                <span class="sub-toggle alt-toggle"></span>
+            </label>
+        </section> -->
     </main>
     <footer>
-        <p id="feedtext">
+        <p id="feedback-text">
             Have feedback about Ebb? <a href="https://forms.gle/hzfP8fiSq69QFeHn7" target="_blank" rel="noreferrer">Click here!</a>
         </p>
     </footer>
